@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:id="@+id/activity_imageview"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/upload" />
+
+
+    <TextView
+        android:id="@+id/activity_uploadImage_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:fontFamily="casual"
+        android:text="@string/choose_an_image"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_imageview"
+        app:layout_constraintEnd_toEndOf="@+id/activity_imageview"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/activity_imageview" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:max="100"
+        tools:progress="0"
+        app:layout_constraintEnd_toEndOf="@+id/activity_imageview"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/activity_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/activity_imageview"
+         />
+
+    <Button
+        android:id="@+id/upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/item_background"
+        android:padding="13dp"
+        android:text="@string/upload_picture"
+        android:textColor="@color/dark"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/activity_request_button"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/activity_request_button"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar"
+        app:layout_constraintVertical_bias="0.937" />
+
+    <TextView
+        android:id="@+id/activity_request_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="@string/permission_denied_please_click_button_to_request_again"
+        app:layout_constraintBottom_toTopOf="@+id/upload_button"
+        app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/progress_bar"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <Button
+        android:id="@+id/activity_request_button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:padding="15dp"
+        android:text="@string/request_permission"
+        android:textSize="15sp"
+        android:fontFamily="casual"
+        android:visibility="invisible"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/upload_button"
+        app:layout_constraintEnd_toEndOf="@+id/activity_request_textview"
+        app:layout_constraintStart_toStartOf="@+id/activity_request_textview"
+        app:layout_constraintTop_toBottomOf="@+id/activity_request_textview" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

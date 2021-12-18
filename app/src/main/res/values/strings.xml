@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Image Uploader</string>
+    <string name="choose_an_image">Choose an Image</string>
+    <string name="upload_picture">Upload Picture</string>
+    <string name="request_permission">Request permission</string>
+    <string name="permission_denied_please_click_button_to_request_again">Permission denied, please click button to request again</string>
+</resources>
