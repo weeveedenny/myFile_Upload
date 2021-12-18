@@ -117,7 +117,6 @@ class MainActivity : AppCompatActivity(), ImageUploadRequestBody.UploadCallback 
                 progress_bar.progress = 100
                toast(this@MainActivity, "Successfully Uploaded Photo")
 
-
             }
         })
 
