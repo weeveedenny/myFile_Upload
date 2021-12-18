@@ -80,7 +80,6 @@ class MainActivity : AppCompatActivity(), ImageUploadRequestBody.UploadCallback 
     private fun uploadImage() {
         if (selectedImageUri == null) {
             toast(this@MainActivity, "Please select an Image")
-
             return
         }
 
@@ -148,7 +147,7 @@ class MainActivity : AppCompatActivity(), ImageUploadRequestBody.UploadCallback 
                 openImageChooser()
             } else {
                 // Permission request was denied.
-                var reqText = findViewById<TextView>(R.id.activity_request_textview)
+                val reqText = findViewById<TextView>(R.id.activity_request_textview)
                 reqText.visibility = View.VISIBLE
                 reqButton = findViewById(R.id.activity_request_button)
                 reqButton.visibility = View.VISIBLE
@@ -160,8 +159,6 @@ class MainActivity : AppCompatActivity(), ImageUploadRequestBody.UploadCallback 
         }
 
     }
-
-
 
 
 
